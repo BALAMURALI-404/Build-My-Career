@@ -1,0 +1,10 @@
+# Personal profile data (DO NOT COMMIT)
+profile.js
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+.vscode/
+.idea/
