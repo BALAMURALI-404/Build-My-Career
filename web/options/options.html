@@ -2,41 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BuildMyCareer Settings</title>
+  <title>BuildMyCareer</title>
   <link rel="stylesheet" href="options.css">
 </head>
 <body>
+  <header>
+    <img src="/public/logo.png" alt="BuildMyCareer" class="logo">
+    <nav>
+      <a href="https://buildmycareer.dev"  rel="noopener">Log in</a>
+      <a href="https://buildmycareer.dev"  rel="noopener">Sign up</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+        <div class="bg-effects">
+          <span></span>
+          <span></span>
+        </div>
+        <p class="eyebrow">Chrome Extension for Job Applications</p>
+        <h1 class="slogan">Fill Once.<br /><span>Apply Everywhere.</span></h1>
+        <p class="subtitle">
+          BuildMyCareer auto-fills job applications across various job portals,<br> so you stop repeating yourself.
+        </p>
+        <a href="https://buildmycareer.dev" class="button" rel="noopener">Get Started</a>
+    </section>
+    <section class="login">
+      <div class="login-form">
+        <h2>Login</h2>
+        <form action="">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <div>
+        <span>Don't have an account?</span>
+        <a href="">Register Now</a>
+      </div>
+    </section>
+    <section class="signup">
+      <div class="login-form">
+        <h2>Create Account</h2>
+        <form action="">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
 
-  <h1>BuildMyCareer</h1>
-
-  <section>
-    <h2>Personal Info</h2>
-
-    <label>
-      First Name
-      <input type="text" id="first_name">
-    </label>
-
-    <label>
-      Last Name
-      <input type="text" id="last_name">
-    </label>
-
-    <label>
-      Email
-      <input type="email" id="email">
-    </label>
-
-    <label>
-      Phone
-      <input type="text" id="phone">
-    </label>
-  </section>
-
-  <button id="save">Save</button>
-
-  <p id="status"></p>
-
+          <label for="password">Confirm Password:</label>
+          <input type="password" id="password" name="password" required>
+          
+          <button type="submit">Create</button>
+        </form>
+      </div>
+      <div>
+        <span>Already here?</span>
+        <a href="">Login</a>
+      </div>
+    </section>
+    <section class="profile">
+      <h2>Your Profile</h2>
+      <!-- Personal details -->  
+      <div class="profile-form">
+        <h2>Personal Details</h2>
+        <!-- profile form -->
+        <form action="">
+          <div style="display: flex;"><span class="title">Name</span> <hr></div>   
+          <!-- name -->       
+          <div class="name">
+            <div>
+              <label for="name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" >  
+            </div>
+            <div>
+              <label for="name">Middle Name:</label>
+              <input type="text" id="middle-name" name="middle-name"> 
+            </div>
+            <div>
+              <label for="name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" >  
+            </div>
+          </div>
+          <!-- full name -->  
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" disabled>  
+          <br><br><div style="display: flex;"><span class="title">Contact Details</span> <hr></div>
+          <!-- contact -->  
+          <div class="contact">
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" > 
+            </div>
+            <div>
+              <label for="country-code">Country code:</label>
+              <input type="text" id="country-code" name="country-code"> 
+            </div>
+            <div>
+              <label for="phone">Phone:</label>
+              <input type="number" id="phone" name="phone" > 
+            </div>
+          </div>
+          <br><div style="display: flex;"><span class="title">Address</span> <hr></div>
+          <!-- address -->  
+          <div class="address">
+            <div>
+              <label for="Address">Address:</label>
+              <input type="text" id="Address" name="Address" > 
+            </div>
+            <div>
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" > 
+            </div>
+            <div>
+              <label for="state">State:</label>
+              <input type="text" id="state" name="state" > 
+            </div>
+            <div>
+              <label for="country">Country:</label>
+              <input type="text" id="country" name="country" > 
+            </div>
+            <div>
+              <label for="pincode">Pincode:</label>
+              <input type="number" id="pincode" name="pincode" > 
+            </div>
+          </div>
+          <!-- full address -->  
+          <label for="full-address">Full Address:</label>
+          <input type="text" id="full-address" name="full-address" disabled>  
+          <br><br><div style="display: flex;"><span class="title">Date Of Birth</span><hr></div><br>
+          <!-- date of birth -->  
+          <label for="date">Date Of Birth:</label>
+          <input type="date" id="date" name="date" > 
+          <br>
+          <div style="display:flex; justify-content: end;">
+            <button type="submit">Save Changes</button>
+          </div>
+        </form>
+      </div>
+      <!-- education --> 
+      <div class="profile-form">
+        <h2>Education</h2>
+        <div id="education-list"></div>
+        <button type="button" id="add-education">Add</button>
+      </div>
+      <!-- Experiance --> 
+      <div class="profile-form">
+        <h2>Experiance</h2>
+        <div id="experiance-list"></div>
+        <button type="button" id="add-experiance">Add</button>
+      </div>
+      <!-- links --> 
+      <div class="profile-form">
+        <h2>Social</h2>
+        <form action="">
+          <div class="links">
+            <div>
+              <label for="linkedin">Linkedin:</label>
+              <input type="text" id="linkedin" name="linkedin">
+            </div>
+            <div>
+              <label for="github">Github:</label>
+              <input type="text" id="github" name="github">
+            </div>
+            <div>
+              <label for="portfolio/website">Portfolio/Website:</label>
+              <input type="text" id="portfolio/website" name="portfolio/website">
+            </div>
+          </div>
+          <div style="display:flex; justify-content: end;">
+            <button type="submit">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
   <script src="options.js"></script>
 </body>
 </html>
