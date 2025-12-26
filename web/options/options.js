@@ -1,16 +1,35 @@
-const saveBtn = document.getElementById("save");
-const status = document.getElementById("status");
+const hero = document.getElementById("herosection");
+const login = document.getElementById("loginsection");
+const signup = document.getElementById("signupsection");
+const profile = document.getElementById("profilesection");
+const main = document.getElementById("main");
 
-saveBtn.addEventListener("click", () => {
-  const profile = {
-    first_name: document.getElementById("first_name").value,
-    last_name: document.getElementById("last_name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value
-  };
+function activatehero(){
+    hero.style.display="flex";
+    login.style.display="none";
+    signup.style.display="none";
+    profile.style.display="none";
+    main.style.height="90vh";
+}
+function activatelogin(){
+    hero.style.display="none";
+    login.style.display="flex";
+    signup.style.display="none";
+    profile.style.display="none";
+    main.style.height="90vh";
+}
+function activatesignup(){
+    hero.style.display="none";
+    login.style.display="none";
+    signup.style.display="flex";
+    profile.style.display="none";
+    main.style.height="90vh";
+}
+function activateprofile(){
+    hero.style.display="none";
+    login.style.display="none";
+    signup.style.display="none";
+    profile.style.display="flex";
+    main.style.height="90%";
+}
 
-  chrome.storage.local.set({ profile }, () => {
-    status.textContent = "Saved successfully ✔";
-    setTimeout(() => status.textContent = "", 2000);
-  });
-});

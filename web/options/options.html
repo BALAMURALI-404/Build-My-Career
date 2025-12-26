@@ -7,14 +7,14 @@
 </head>
 <body>
   <header>
-    <img src="/public/logo.png" alt="BuildMyCareer" class="logo">
+    <a onclick="activatehero()"><img src="/public/logo.png" alt="BuildMyCareer" class="logo"></a>
     <nav>
-      <a href="https://buildmycareer.dev"  rel="noopener">Log in</a>
-      <a href="https://buildmycareer.dev"  rel="noopener">Sign up</a>
+      <a onclick="activatelogin()">Log in</a>
+      <a onclick="activatesignup()">Sign up</a>
     </nav>
   </header>
-  <main>
-    <section class="hero">
+  <main id="main">
+    <section id="herosection" class="hero">
         <div class="bg-effects">
           <span></span>
           <span></span>
@@ -24,9 +24,9 @@
         <p class="subtitle">
           BuildMyCareer auto-fills job applications across various job portals,<br> so you stop repeating yourself.
         </p>
-        <a href="https://buildmycareer.dev" class="button" rel="noopener">Get Started</a>
+        <a onclick="activateprofile()" class="button">Get Started</a>
     </section>
-    <section class="login">
+    <section id="loginsection" class="login">
       <div class="login-form">
         <h2>Login</h2>
         <form action="">
@@ -41,10 +41,10 @@
       </div>
       <div>
         <span>Don't have an account?</span>
-        <a href="">Register Now</a>
+        <a onclick="activatesignup()">Register Now</a>
       </div>
     </section>
-    <section class="signup">
+    <section id="signupsection" class="signup">
       <div class="login-form">
         <h2>Create Account</h2>
         <form action="">
@@ -55,17 +55,17 @@
           <input type="password" id="password" name="password" required>
 
           <label for="password">Confirm Password:</label>
-          <input type="password" id="password" name="password" required>
+          <input type="password" id="confirm-password" name="password" required>
           
           <button type="submit">Create</button>
         </form>
       </div>
       <div>
         <span>Already here?</span>
-        <a href="">Login</a>
+        <a onclick="activatelogin()">Login</a>
       </div>
     </section>
-    <section class="profile">
+    <section id="profilesection" class="profile">
       <h2>Your Profile</h2>
       <!-- Personal details -->  
       <div class="profile-form">
@@ -182,5 +182,6 @@
     </section>
   </main>
   <script src="options.js"></script>
+  <script src="profile.js"></script>
 </body>
 </html>
