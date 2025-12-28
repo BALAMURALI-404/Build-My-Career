@@ -328,3 +328,13 @@ hr {
   background: white;
   transition-duration: 200ms;
 }
+
+.edu-item{
+  display: grid;
+  grid: auto-flow/auto auto auto;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: rgba(255,255,255,0.1);
+}

@@ -7,10 +7,12 @@
 </head>
 <body>
   <header>
-    <a onclick="activatehero()"><img src="/public/logo.png" alt="BuildMyCareer" class="logo"></a>
+    <a id="nav-logo" onclick="activatehero()"><img src="/public/logo.png" alt="BuildMyCareer" class="logo"></a>
     <nav>
-      <a onclick="activatelogin()">Log in</a>
-      <a onclick="activatesignup()">Sign up</a>
+      <a id="pf-btn">Profile</a>
+      <a id="lin-btn">Log in</a>
+      <a id="sup-btn">Sign up</a>
+      <a id="lout-btn">Log out</a>
     </nav>
   </header>
   <main id="main">
@@ -24,7 +26,7 @@
         <p class="subtitle">
           BuildMyCareer auto-fills job applications across various job portals,<br> so you stop repeating yourself.
         </p>
-        <a onclick="activateprofile()" class="button">Get Started</a>
+        <a id="get-started" class="button">Get Started</a>
     </section>
     <section id="loginsection" class="login">
       <div class="login-form">
@@ -41,7 +43,7 @@
       </div>
       <div>
         <span>Don't have an account?</span>
-        <a onclick="activatesignup()">Register Now</a>
+        <a id="sup-btn1">Register Now</a>
       </div>
     </section>
     <section id="signupsection" class="signup">
@@ -62,7 +64,7 @@
       </div>
       <div>
         <span>Already here?</span>
-        <a onclick="activatelogin()">Login</a>
+        <a id="lin-btn1">Login</a>
       </div>
     </section>
     <section id="profilesection" class="profile">
@@ -181,7 +183,7 @@
       </div>
     </section>
   </main>
-  <script src="options.js"></script>
+  <script type="module" src="options.js"></script>
   <script src="profile.js"></script>
 </body>
 </html>
